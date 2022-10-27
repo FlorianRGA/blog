@@ -1,11 +1,16 @@
-<title>Document</title>
 </head>
-<header>
-    <div class="d-flex justify-between">
-        <h1>
-            <a href="/">Blogue</a>
-        </h1>
-        <a href="#">Ecrire un article</a>
+<header class="dark-mode-primary">
+    <div class="container">
+        <nav>
+            <ul class="d-flex justify-between">
+                <div>
+                    <li><a class="dark-mode-white" href="/">Blug</a></li>
+                </div>
+                <div>
+                    <li><a class="dark-mode-white" href="#">Ecrire un article</a></li>
+                </div>
+            </ul>
+        </nav>
     </div>
 </header>
 

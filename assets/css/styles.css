@@ -8,13 +8,15 @@ html {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a {
-    color: black;
+    color: var(--white);
     text-decoration: none;
+    transition: all 1s;
 }
+
 li {
     list-style: none;
 }
-/* ===FONTS=== */
+/* === FONTS IMPORT === */
 @font-face {
     font-family: "Josefin regular";
     src: url("../fonts/JosefinSans-Regular.ttf")
@@ -36,14 +38,15 @@ li {
 .regular {
     font-family: 'Josefin light', sans-serif;
 }
-/* ===ROOT=== */
+/* === ROOT === */
 :root {
-    --primary: #242038;
-    --secondary: #F7ECE1;
-    --third: #A15E49;
+    --primary: #0e1217;
+    --secondary: #1c1f26;
+    --third: #aa38d2;
+    --fourth: #a9abb3;
     --white: #ffffff;
 }
-/* ===DARK MODE=== */
+/* === DARK MODE === */
 .dark-mode-primary {
     background-color: var(--primary);
 }
@@ -54,23 +57,62 @@ li {
     background-color: var(--third);
 }
 .dark-mode-white {
-    color: var(--white);
+    background-color: var(--white);
 }
-/* ===BRIGHT MODE=== */
-.bright-mode-primary {
-    background-color: var(--secondary);
-}
-.bright-mode-secondary {
-    background-color: var(--third);
-}
-.bright-mode-third {
+/* === LIGHT MODE === */
+.light-mode-primary {
     background-color: var(--primary);
 }
-.bright-mode-white {
+.light-mode-secondary {
+    
+    background-color: var(--secondary);
+}
+.light-mode-third {
+   
+    background-color: var(--third);
+}
+.light-mode-white {
     color: var(--white);
 }
-/* ===GENERAL CLASS=== */
-
+/* === FONTS SIZE === */
+.fs-large{
+    font-size: x-large;
+}
+.fs-medium {
+    font-size: medium;
+}
+/* === TEXT === */
+.text-center {
+    text-align: center;
+}
+.text-end {
+    text-align: end;
+}
+.text-primary {
+    color: black;
+}
+.text-secondary {
+    color: var(--secondary);
+}
+.text-third {
+    color: var(--third);
+}
+.text-white {
+    color: var(--white);
+}
+.text-fourth {
+    color: #a9abb3;
+}
+/* === DISPLAY / FLEX === */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.column {
+    flex-direction: column;
+}
+.flex-end {
+    justify-content: flex-end;
+}
 .d-flex {
     display: flex;
 }
@@ -86,11 +128,160 @@ li {
 .items-center {
     align-items: center;
 }
+
 .container {
     max-width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
-/* ===HEADER=== */
-/* ===MAIN=== */
-/* ===FOOTER=== */
+/* === PADDING / MARGIN / WIDTH / HEIGHT === */
+.p-small {
+    padding: 7px;
+}
+.p-medium {
+    padding: 14px;
+}
+.p-large {
+    padding: 21px;
+}
+.pb-large {
+    padding-bottom: 21px;
+}
+.mb-small {
+    margin-bottom: 7px;
+}
+.mb-medium {
+    margin-bottom: 14px;
+}
+.mb-large {
+    margin-bottom: 21px;
+}
+.mt-large {
+    margin-top: 21px;
+}
+.w-25 {
+    width: 25%;
+}
+.w-50{
+    width: 50%;
+}
+.w-75{
+    width: 75%;
+}
+.w-100{
+    width: 100%;
+}
+.w-33 {
+    width: 46%;
+}
+.h-25 {
+    height: 200px;
+}
+/* === CARD === */
+.card {
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px -5px var(--fourth);
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 1px var(--fourth);
+    width: 45%;
+    margin-top: 7%;
+    height: 70vh;
+}
+
+.card-position:nth-child(odd) {
+    margin-right: 9%;
+}
+.card-text {
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+.card-title {
+    margin-bottom: 16px;
+    margin-top: 8px;
+    border-radius: 0px 0px 10px 0px;
+}
+.card-desc {
+
+}
+article {
+    display: inline;
+}
+.card-image {
+    width: 100%;
+    height: 350px;
+    background-position: top;
+    background-size:auto;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0px 0px;
+    transition: all 1s;
+}
+
+/* === FORMS === */
+.form-card {
+    width: 50vw;
+    box-shadow: 5px 5px 15px 5px var(--secondary);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    border-radius: 20px;
+    border: solid 1px var(--fourth);
+}
+.button {
+    background-color: var(--primary);
+    border: solid 1px var(--third);
+    border-radius: 7px;
+    padding: 10px;
+    width: fit-content;
+    cursor: pointer;
+    color: #aa38d2;
+    box-shadow: 0px 10px 13px -10px var(--primary),inset 5px 5px 15px 5px var(--secondary);
+    transition: all 1s;
+}
+
+
+/* === HOVER === */
+.button:hover {
+    transition: all 1s;
+    box-shadow: 0px 10px 13px -10px var(--third),inset 5px 5px 15px 5px var(--secondary);
+    font-size: 1rem;
+}
+.card:hover .card-image {
+    background-size:cover;
+    transition: all 1s;
+}
+.link-primary:hover {
+    color: var(--white);
+    text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+    font-size: large;
+    transition: all 1s;
+}
+.link-secondary:hover {
+    color: var(--white);
+    font-size: large;
+    transition: all 1s;
+}
+.link-fourth:hover {
+    text-shadow: 2px 2px 2px var(--third);
+    color: var(--white);
+}
+/* === SOCIAL === */
+.social {
+    border-radius: 10px;
+}
+/* === HTML ELEMENTS === */
+input, textarea , select{
+    border-radius: 5px;
+    border: solid 1px var(--fourth);
+}
+
+
+main {
+    padding-bottom: 100px;
+}
+header {
+    border-bottom: solid 2px var(--fourth);
+}
